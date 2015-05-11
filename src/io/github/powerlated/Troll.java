@@ -68,7 +68,7 @@ public final class Troll extends org.bukkit.plugin.java.JavaPlugin {
 				return true;
 			} else if (args[0].equalsIgnoreCase("dp")) {
 				if (args.length == 3) {
-					if (args[2] == "stop") {
+					if (args[2].equalsIgnoreCase("stop")) {
 						dirtPunch.remove(Bukkit.getServer().getPlayer(args[1]));
 						sender.sendMessage(ChatColor.GRAY + "Troll stopped for " + args[1]);
 						return true;
