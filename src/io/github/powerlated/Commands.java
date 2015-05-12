@@ -1,5 +1,7 @@
 package io.github.powerlated;
 
+import io.github.powerlated.effects.Explode;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -76,7 +78,14 @@ public class Commands implements CommandExecutor {
 				Main.dirtPunch.add(Bukkit.getPlayerExact(args[1]));
 				return true;
 			}
-
+			if (args[0].equalsIgnoreCase("explode")) {
+				if (!CheckOnlineStatus.check(sender, args, 1)) {
+					return true;
+				}
+				Explode.explode(Bukkit.getPlayer(args[1]));
+				sender.sendMessage(ChatColor.GRAY + "F3 + A to stop the lag!");
+				return true;
+			}
 			if (args[0].equalsIgnoreCase("help")) {
 				help(sender);
 				return true;
@@ -107,7 +116,8 @@ public class Commands implements CommandExecutor {
 			+ "hj - Makes the player jump really high, ONCE\n"
 			+ "anvil - Drops an anvil on the player\n" 
 			+ "dp - Makes every single block the player clicks on drop dirt\n" 
-			+ "    - parameter: stop - Stops the troll");
+			+ "    - parameter: stop - Stops the troll"
+			+ "explosion - Like 100 TNT minecarts, WITH FIRE!");
 
 	private void help(CommandSender sender) {
 		if (sender instanceof Player) {
