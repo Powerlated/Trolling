@@ -9,7 +9,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.util.Vector;
 
 public class Commands implements CommandExecutor {
@@ -107,7 +106,7 @@ public class Commands implements CommandExecutor {
 			+ ChatColor.WHITE
 			+ "hj - Makes the player jump really high, ONCE\n"
 			+ "anvil - Drops an anvil on the player\n" 
-			+ "dc - Makes every single block the player clicks on drop dirt\n" 
+			+ "dp - Makes every single block the player clicks on drop dirt\n" 
 			+ "    - parameter: stop - Stops the troll");
 
 	private void help(CommandSender sender) {
