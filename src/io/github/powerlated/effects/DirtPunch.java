@@ -1,7 +1,6 @@
 package io.github.powerlated.effects;
 
 import io.github.powerlated.Main;
-
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
