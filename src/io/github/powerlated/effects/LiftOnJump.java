@@ -1,6 +1,6 @@
 package io.github.powerlated.effects;
 
-import io.github.powerlated.Troll;
+import io.github.powerlated.Main;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -19,7 +19,7 @@ public class LiftOnJump implements Listener {
 	public void liftOnJump(PlayerMoveEvent event) throws InterruptedException {
 		Vector v = event.getPlayer().getVelocity();
 		if ((this.v1.getY() < v.getY()) && (this.v2.getY() > v.getY())
-				&& (Troll.lift.contains(event.getPlayer()))) {
+				&& (Main.lift.contains(event.getPlayer()))) {
 			Location loc = event.getPlayer().getLocation();
 			Block b = loc.getBlock();
 			if ((b.getType() == Material.STATIONARY_WATER)
@@ -27,7 +27,7 @@ public class LiftOnJump implements Listener {
 				return;
 			}
 			event.getPlayer().setVelocity(new Vector(0, 10, 0));
-			Troll.lift.remove(event.getPlayer());
+			Main.lift.remove(event.getPlayer());
 		}
 	}
 }

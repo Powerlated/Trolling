@@ -1,6 +1,6 @@
 package io.github.powerlated.effects;
 
-import io.github.powerlated.Troll;
+import io.github.powerlated.Main;
 
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
@@ -12,7 +12,7 @@ public class DirtPunch implements Listener {
 
 	@EventHandler
 	public void onPlayerInteractEvent(PlayerInteractEvent event) {
-		if ((Troll.dirtPunch.contains(event.getPlayer()) && event.getAction() == Action.LEFT_CLICK_BLOCK)) {
+		if ((Main.dirtPunch.contains(event.getPlayer()) && event.getAction() == Action.LEFT_CLICK_BLOCK)) {
 			if ((event.getClickedBlock().getType() == Material.RED_ROSE)
 			   || (event.getClickedBlock().getType() == Material.YELLOW_FLOWER) || (event.getClickedBlock().getType() == Material.BEDROCK)
 			   || (event.getClickedBlock().getType() == Material.LONG_GRASS) || (event.getClickedBlock().getType() == Material.CHEST) || (event.getClickedBlock().getType() == Material.DOUBLE_PLANT)) {
