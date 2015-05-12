@@ -1,7 +1,6 @@
 name: FlexibleRTP
 main: io.github.powerlated.Main
 version: 1.0
-depend: [PowerlatedCore]
 commands:
   troll:
     description: 

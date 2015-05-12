@@ -13,6 +13,7 @@ public final class Main extends JavaPlugin {
 	public static HashSet<Player> dirtPunch = new HashSet<Player>();
 
 	public void onEnable() {
+		getCommand("troll").setExecutor(new Commands(this));
 		getServer().getPluginManager().registerEvents(new LiftOnJump(), this);
 		getServer().getPluginManager().registerEvents(new DirtPunch(), this);
 	}
